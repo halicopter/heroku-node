@@ -1,5 +1,5 @@
 {
-  "name": "email-count-app",
+  "name": "heroku-node",
   "version": "1.0.0",
   "description": "app for getting email counts",
   "main": "index.js",
