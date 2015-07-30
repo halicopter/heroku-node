@@ -8,7 +8,7 @@ function getEmailCount(stormpath, request, app) {
     secretKey:    process.env.STORMPATH_SECRET_KEY,
     application:  process.env.STORMPATH_URL,
   }));
-  app.use(require('./index'));
+
 app.listen(process.env.PORT || 3000);
 
   /*console.log(process.env.STORMPATH_API_KEY_ID);
@@ -22,7 +22,7 @@ app.listen(process.env.PORT || 3000);
 
   console.log(apiKey);
 
-  client = new stormpath.client({apiKey: apiKey});
+  client = new stormpath.Client({apiKey: apiKey});
 
   var app_url = 'https://api.stormpath.com/v1/applications/68pmLTnBHSvLhbbGIgn6Eb/';
 
