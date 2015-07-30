@@ -1,0 +1,24 @@
+{
+  "name": "email-count-app",
+  "version": "1.0.0",
+  "description": "app for getting email counts",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halicopter/heroku-node.git"
+  },
+  "author": "Hali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/halicopter/heroku-node/issues"
+  },
+  "homepage": "https://github.com/halicopter/heroku-node#readme",
+  "dependencies": {
+    "express": "^4.13.1",
+    "request": "^2.60.0",
+    "stormpath": "^0.10.1"
+  }
+}
