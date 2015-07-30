@@ -9,14 +9,10 @@ function getEmailCount(stormpath, request, app) {
     application:  process.env.STORMPATH_URL,
   }));*/
 
-console.log(process.env.STORMPATH_API_KEY_ID);
-
   var apiKey = new stormpath.ApiKey(
     process.env.STORMPATH_API_KEY_ID,
     process.env.STORMPATH_API_KEY_SECRET
   );
-
-  console.log(apiKey);
 
   client = new stormpath.client({apiKey: apiKey});
 
@@ -51,7 +47,7 @@ console.log(process.env.STORMPATH_API_KEY_ID);
 
 
 (function(){
-	var stormpath = require('stormpath')
+	var stormpath = require('express-stormpath')
 	    app = require('express')()
 	    request = require('request');
 	getEmailCount(stormpath, request, app);
