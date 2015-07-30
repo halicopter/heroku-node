@@ -11,10 +11,10 @@ function getEmailCount(stormpath, request, app) {
 
 app.listen(process.env.PORT || 3000);
 
-  /*console.log(process.env.STORMPATH_API_KEY_ID);
+  console.log(process.env.STORMPATH_API_KEY_ID);
   console.log(process.env.STORMPATH_API_KEY_SECRET);
 
-
+/*
   var apiKey = new stormpath.ApiKey(
     process.env.STORMPATH_API_KEY_ID,
     process.env.STORMPATH_API_KEY_SECRET
