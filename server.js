@@ -2,15 +2,18 @@ function getEmailCount(stormpath, request, app) {
 	var size = null
 		client = null;
 
-  /*app.use(stormpath.init(app, {
+  app.use(stormpath.init(app, {
     apiKeyId:     process.env.STORMPATH_API_KEY_ID,
     apiKeySecret: process.env.STORMPATH_API_KEY_SECRET,
     secretKey:    process.env.STORMPATH_SECRET_KEY,
     application:  process.env.STORMPATH_URL,
-  }));*/
-  
-  console.log(STORMPATH_API_KEY_ID);
-  console.log(STORMPATH_SECRET_KEY);
+  }));
+  app.use(require('./index'));
+app.listen(process.env.PORT || 3000);
+
+  /*console.log(process.env.STORMPATH_API_KEY_ID);
+  console.log(process.env.STORMPATH_API_KEY_SECRET);
+
 
   var apiKey = new stormpath.ApiKey(
     process.env.STORMPATH_API_KEY_ID,
@@ -44,7 +47,7 @@ function getEmailCount(stormpath, request, app) {
           });
       	});
   });  
-
+*/
 }
 
 //need to add stuff to file so this can be run/tested on heroku
