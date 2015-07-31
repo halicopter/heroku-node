@@ -1,11 +1,11 @@
 function getEmailCount(stormpath, request, app) {
 	var size = null
 		client = null;
-    homedir = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME
-    keyfile = homedir + '/.stormpath/apiKey.properties';
 
-  stormpath.loadApiKey(keyfile, function apiKeyFileLoaded(err, apiKey) {
-      if (err) throw err;
+  var apiKey = new stormpath.ApiKey(process.env.STORMPATH_API_KEY_ID, process.env.STORMPATH_API_KEY_SECRET);
+
+
+
       client = new stormpath.Client({apiKey: apiKey});
       var app_url = 'https://api.stormpath.com/v1/applications/68pmLTnBHSvLhbbGIgn6Eb/';
 
@@ -29,8 +29,7 @@ function getEmailCount(stormpath, request, app) {
             console.log("running at localhost:" + app.get('port'))
           });
         });
-      });    
-    });
+      });
 }
 
 //need to add stuff to file so this can be run/tested on heroku
