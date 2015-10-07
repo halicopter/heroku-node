@@ -32,10 +32,6 @@ function getEmailCount(stormpath, request, app) {
       });
 }
 
-//need to add stuff to file so this can be run/tested on heroku
-//how do I mimic sending a request?
-
-
 (function(){
 	var stormpath = require('stormpath')
 	    app = require('express')()
